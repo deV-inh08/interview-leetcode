@@ -8,7 +8,8 @@ function removeDuplicates(nums) {
         }
     }
     return k;
-}
+};
+
 let nums = [1, 1, 2];
 let k2 = removeDuplicates(nums);
 console.log(k2, nums.slice(0, k2));
