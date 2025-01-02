@@ -6,7 +6,9 @@ var maxProfit = function(prices) {
 
 // + stock luôn giảm (Luôn giảm thì mua bán làm gì nữa, return 0 luôn)
 
-// + stock lúc tăng lúc giảm
+// + stock lúc tăng lúc giảm: (xem thằng buy có nhỏ hơn thằng sell không )
+// nếu có thì tính lãi rồi cộng dồn dô (profit). Tiếp tục tăng lên số ngày(i) kiểm tra lại lần nữa 
+// đến khi nào hết vòng lặp
         if(prices[i] < prices[i + 1]) {
             maxProfit += prices[i + 1] - prices[i]
         }

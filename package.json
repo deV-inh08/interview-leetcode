@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch buy_and_sell_stock2"
+    "start": "node --watch jump_game"
   },
   "keywords": [],
   "author": "",
