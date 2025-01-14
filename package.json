@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch reverseWords"
+    "start": "node --watch find_the_index_of_the_first"
   },
   "keywords": [],
   "author": "",
