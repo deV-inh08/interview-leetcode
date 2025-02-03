@@ -24,7 +24,6 @@ var kidsWithCandies = function(candies, extraCandies) {
     return candies.map(c => c + extraCandies >= Math.max(...candies));
 };
 
-
 console.log(kidsWithCandies([12, 1, 12], 1));
 
 
