@@ -7,3 +7,43 @@ var isPalindrome = function(s) {
     
     return filteredString === reversedString;
 };
+
+// method 2:
+
+class ReverseString {
+    constructor(str) {
+        this.str = str
+    }
+
+    // clean string
+    cleanStr() {
+        let char = '';
+        // lower case
+        let convertLowercase = this.str.toLowerCase();
+        for(let i = 0; i < convertLowercase.length; i++) {
+            if((convertLowercase[i] >= 'a' && convertLowercase[i] <= 'z') || (convertLowercase[i] >= '0' && convertLowercase[i] <= '9')) {
+                char += convertLowercase[i]
+            }
+        }
+       
+        return char
+    }
+
+    // reverse
+    isPalindrome() {
+        let reverse = '';
+        let string = this.cleanStr();
+        for(let i = string.length -1; i >=0 ; i--) {
+            reverse += string[i]
+        }
+        if(reverse === string) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+const reverseStr = new ReverseString("race a car")
+
+console.log(reverseStr.isPalindrome())
