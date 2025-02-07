@@ -10,7 +10,7 @@ var isPalindrome = function(s) {
 
 // method 2:
 
-class ReverseString {
+class String2 {
     constructor(str) {
         this.str = str
     }
@@ -44,6 +44,6 @@ class ReverseString {
     }
 }
 
-const reverseStr = new ReverseString("race a car")
+const reverseStr = new String2("race a car")
 
-console.log(reverseStr.isPalindrome())
+console.log(reverseStr.isPalindrome()) // O(n)
