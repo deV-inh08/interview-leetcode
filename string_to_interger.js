@@ -1,51 +1,51 @@
-const myAtoi = function(s) {
-    // Ignore any leading whitespace
-    let removeWhiteSpace = s.trim();
-    let arrString = removeWhiteSpace.split('')
-    let result = '';
-    let limitRange = [-(2**31), (2**31 -1)]
-    // can use: 0-9 , -, +(good)
+// const myAtoi = function(s) {
+//     // Ignore any leading whitespace
+//     let removeWhiteSpace = s.trim();
+//     let arrString = removeWhiteSpace.split('')
+//     let result = '';
+//     let limitRange = [-(2**31), (2**31 -1)]
+//     // can use: 0-9 , -, +(good)
     
-    // 0-2321 => 2321
-    // +0435 => 435
+//     // 0-2321 => 2321
+//     // +0435 => 435
 
-    // bad: asd743 => return 0
-    // a0bac 
-    // 01abc => return 1 
-    // 0-23ba432 => 0-23 => -23
+//     // bad: asd743 => return 0
+//     // a0bac 
+//     // 01abc => return 1 
+//     // 0-23ba432 => 0-23 => -23
 
-    if (!((arrString[0] >= '0' && arrString[0] <= '9') || arrString[0] === '-' || arrString[0] === '+')) {
-        return 0;
-    }
-    else {
-        for(let i = 0; i < arrString.length; i++) {
-            if((arrString[i] >= '0' && arrString[i] <= '9') || arrString[i] === '-' || arrString[i] === '+') {
-                result += arrString[i]
-            } else {
-                break
-            }
-        }
-    }
+//     if (!((arrString[0] >= '0' && arrString[0] <= '9') || arrString[0] === '-' || arrString[0] === '+')) {
+//         return 0;
+//     }
+//     else {
+//         for(let i = 0; i < arrString.length; i++) {
+//             if((arrString[i] >= '0' && arrString[i] <= '9') || arrString[i] === '-' || arrString[i] === '+') {
+//                 result += arrString[i]
+//             } else {
+//                 break
+//             }
+//         }
+//     }
 
-    console.log(result)
+//     console.log(result)
 
-    if(result[0] === '0' && (result[1] === '+' || result[1] === '-')) {
-        return 0
-    } else if((result[0] === '+' || result[0] === '-') && (result[1] === '+' || result[1] === '-')) {
-        return 0
-    } 
-    else {
-        if(Number(result) >= limitRange[0] && Number(result) <= limitRange[1]) {
-            return Number(result)
-        } else if(Number(result) > limitRange[1]) {
-            return limitRange[1]
-        } else if(Number(result) < limitRange[0]) {
-            return limitRange[0]
-        }
-    }
-}
+//     if(result[0] === '0' && (result[1] === '+' || result[1] === '-')) {
+//         return 0
+//     } else if((result[0] === '+' || result[0] === '-') && (result[1] === '+' || result[1] === '-')) {
+//         return 0
+//     } 
+//     else {
+//         if(Number(result) >= limitRange[0] && Number(result) <= limitRange[1]) {
+//             return Number(result)
+//         } else if(Number(result) > limitRange[1]) {
+//             return limitRange[1]
+//         } else if(Number(result) < limitRange[0]) {
+//             return limitRange[0]
+//         }
+//     }
+// }
 
-console.log(myAtoi("-+12"))
+// console.log(myAtoi("-+12"))
 
 
 // 
